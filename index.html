@@ -1,0 +1,421 @@
+<html>
+    <head>
+        <title>Zomato</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <script src="index.js"></script>
+
+        <style>
+            body {
+                background-color: #fff;
+                color: #000;
+            }
+            .myDark{
+                background-color: #000;
+                /* color: #fff; */
+            }
+        </style>
+        <script>
+            function changeMode(){
+                var mybody = document.body;
+                mybody.classList.toggle("myDark");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid menu">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#zomato">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            Zomato
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="zomato">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><button onclick="changeMode()" style="background-color: #dd5b0a;
+                                border: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-lightbulb-fill" viewBox="-2 0 20 10">
+                                    <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+                                  </svg></button></li>
+                            <li><a href="#">Add Restaurant</a></li>
+                            <!-- <li><a href="#">Login</a></li> -->
+
+                            <!------------------Login Page Js------------------------------------->
+                            
+                            <li> <a href="#" type="button" data-toggle="modal" data-target="#myModal">Login</a></li>
+
+                            <!-- Modal -->
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="text-align:center;font-weight: bold;"> - LOGIN -</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" action="/action_page.php">
+                                            <div class="form-group">
+                                              <label class="control-label col-sm-2" for="email">Email-Id:</label>
+                                              <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                              <div class="col-sm-10">          
+                                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">        
+                                              <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" name="remember"> Remember me</label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">        
+                                              <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-success">Submit</button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- <li><a href="#">Signup</a></li> -->
+
+                            <!------------------------------Registrations Js--------------------------->
+
+                            <li> <a href="#" type="button" data-toggle="modal" data-target="#myModalRegi">SignUp</a></li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModalRegi" role="dialog">
+                                <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="text-align:center;font-weight: bold;"> - SIGN-UP -</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" action="/action_page.php">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="fname">Name:</label>
+                                                <div class="col-sm-10">
+                                                  <input type="text" class="form-control" id="fname" placeholder="Enter Name" name="fname">
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="control-label col-sm-2" for="age">Age:</label>
+                                                <div class="col-sm-10">
+                                                  <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age">
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="control-label col-sm-2" for="phone">Phone:</label>
+                                                <div class="col-sm-10">
+                                                  <input type="number" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone">
+                                                </div>
+                                              </div>
+                                            <div class="form-group">
+                                              <label class="control-label col-sm-2" for="email">Email-Id:</label>
+                                              <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                              <div class="col-sm-10">          
+                                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">        
+                                              <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" name="remember"> Remember me</label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">        
+                                              <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-success">Submit</button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                
+            </nav>
+            
+        </div>
+         <!--banner start-->
+        <div class="container-fluid background">
+            <div id="banner">
+                <div id="logo">
+                    <span>Zomato</span>
+                 </div>
+                <div id="heading">
+                     Discover the best food & drinks
+                 </div>
+                 <div class="dropdown">
+                    <select id="city" onChange="getHotel()">
+                        <option>---SELECT CITY---</option>
+                       
+                    </select>
+                    <select class="restaurantSelect" id="hotels">
+                        <option>---SELECT RESTAURANT---</option>
+                    </select>
+                </div>
+                <script>
+                    window.onload=getCity()
+                </script>
+            </div>
+        </div>
+        <!--banner end-->
+       
+        <!--category start-->
+        <section id="category">
+            <div class="categoryHeading">Choose By Category</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href=""><img src="images/Category/category-1.png" alt="chana-masala"/></a>
+                            <h4>Combo</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href="#"><img src="images/Category/category-2.png" alt="chana-masala"/></a>
+                            <h4>Pizza</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href=""><img src="images/Category/category-3.png" alt="chana-masala"/></a>
+                            <h4>Burger</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href=""><img src="images/Category/category-4.png" alt="chana-masala"/></a>
+                            <h4>Nov-Veg</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href=""><img src="images/Category/category-5.png" alt="chana-masala"/></a>
+                            <h4>Dinner</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-4">
+                        <div class="categoryDetails">
+                            <a href=""><img src="images/Category/category-6.png" alt="chana-masala"/></a>
+                            <h4>Coffee</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--category ends -->
+       
+        <!--quickSearch Start-->
+        <section id="quickSearch">
+            <div class="quickSearchHeading">Quick Search</div>
+            <div class="quickSearchSubHeading">Discover Restaurants By Meal</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/blog-1.jpg" alt="chana-masala"/>
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                    BreakFast
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your BreakFast Meal
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 120</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/blog-2.jpg" alt="blod-2"/>
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                    Lunch
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your Lunch Meal
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 400</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/paneer.jpg" alt="paneer" />
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                    Dinner
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your Dinner Meal
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 700</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/snacks.png" alt="snacks"/>
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                    Snacks
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your Snacks Meal
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 80</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/night.webp" alt="night"/>
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                  PartyPack
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your Drinks 
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 200</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div id="card">
+                            <div class="card-image">
+                                <img src="images/night-pro.jpg" alt="night-pro" />
+                            </div>
+                            <div class="card-component">
+                                <div class="card-title">
+                                    Drinks
+                                </div>
+                                <div class="card-subtitle">
+                                 Enjoy Your Nightlife Meal
+                                </div>
+                                <div class="option">
+                                    <h6>&#8377; 150</h6>
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--quickSearch end-->
+         <!--banner top start-->
+         <section id="banner-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/cat1.jpg" alt="cat1"/>
+                            </div>
+                            <div class="detail-box">
+                                <h5>Tasty Thursday</h5>
+                                <h6>20% Off</h6>
+                                <button class="btn btn-success">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/cat2.jpg" alt="cat1"/>
+                            </div>
+                            <div class="detail-box">
+                                <h5>Sunday Spacial</h5>
+                                <h6>15% Off</h6>
+                                <button class="btn btn-success">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--banner top end-->
+        <!--footer start-->
+        <section id="footer">
+            <div class="container">
+                <div class="footerTitle">
+                    <h4>&copy;  Anuradha Mishra</h4>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

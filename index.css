@@ -1,0 +1,329 @@
+body{
+    margin: auto;
+    padding:0px;
+}
+.menu{
+    padding:0px;
+}
+.background{
+    padding:0px;
+}
+.navbar-inverse {
+    margin-bottom: 0px;
+    border-radius: 0px;
+  }
+.navbar-header > a.navbar-brand{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar-inverse{
+    background-color:#dd5b0a;
+    border-color: #dd5b0a;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+/*banner css start*/
+
+#banner{
+    height:400px;
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-size: 100%;
+}
+#logo{
+    height:150px;
+    width: 150px;
+    margin-top:5%;
+    margin-left: 36%;
+    position: absolute;
+    font-size: 80px;
+    color:#fff;
+    font-weight: bold;
+    text-shadow:2px 2px 3px darkgrey;
+}
+#logo > span{
+    margin-top:14%;
+    margin-left: 31%;
+    position: absolute;
+}
+#heading{
+    margin-left: 29%;
+    margin-top:13%;
+    position: absolute;
+    font-size: 45px;
+    color: #fff;
+}
+.dropdown{
+    height: 60px;
+    width: 60%;
+    margin-left: 27%;
+    margin-top:19%;
+    position: absolute;
+}
+select{
+    height: 60px;
+    width: 35%;
+}
+select > option{
+    text-align: center;
+}
+.restaurantSelect{
+    width:50%;
+}
+/*category css start*/
+#category{
+    margin-top:40px;
+}
+.categoryHeading {
+    font-size: 35px;
+    color: #e1531f;
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria;
+}
+.categoryDetails{
+    margin-top:20%;
+    border:1px solid #e1531f;
+    border-radius: 4%;
+    box-shadow:1px 1px 10px #000;
+}
+.categoryDetails > a > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:100px;
+    width: 100px;
+    margin-top:2%;
+}
+
+.categoryDetails > h4{
+    text-align: center;
+    color:#e1531f;
+    font-weight:bold;
+    margin-top:0px;
+}
+ /*category css end*/
+
+ /*banner-top start*/
+ .box{
+     display: inline-block;
+    height:200px;
+    width: 100%;
+    margin-top:45px;
+    border-radius: 5px;
+    padding:20px 15px;
+    background-color:#222831;
+}     
+.img-box{
+    width: 175px;
+    height: 175px;
+    margin-right: 55px;
+    border-radius: 100%;
+    border: 5px solid #ffbe33;
+    overflow: hidden;
+    float: left;
+    margin-top:-1%;
+}
+.img-box > img{
+    width: 100%;
+}
+.detail-box > h5{
+    font-family:cursive;
+    font-size: 24px;
+    margin-top: 4%;
+    color: #fff;
+}
+.detail-box > h6{
+    margin-top:2%;
+    color: #fff;
+    font-size:25px;
+    font-family: cursive;
+}
+.btn-success{
+    margin-top:4%;
+    width: 35%;
+    height:40px;
+    border-radius:20px;
+    font-weight: bold;
+}
+ /*banner-top end*/
+ /*quickSearch start*/
+
+ #quickSearch{
+     margin-top:70px;
+ }
+ .quickSearchHeading{
+    font-size: 32px;
+    color: #e1531f;
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria;
+ }
+ .quickSearchSubHeading{
+     font-size:22px;
+     color: gray;
+     text-align: center;
+     font-weight: bold;
+     font-family: Cambria;
+ }
+#card{
+    height: 290px;
+    /* border: 1px solid red; */
+    margin-top:18%;
+    box-shadow: 5px 12px 12px darkgrey;
+}
+.card-image > img{
+    height: 180px;
+    width: 100%;
+
+}
+.card-image >img:hover{
+    transform: scale(0.9);
+}
+
+.option > h6{
+    font-size: 20px;
+    float: left;
+    margin-left: 10%;
+    font-weight: bold;
+    color: #8a8484;
+}
+.glyphicon-shopping-cart{
+    margin-top: 25%;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 22%;
+}
+.option>.icon{
+    width: 40px;
+    height: 40px;
+    float: right; 
+    border-radius: 100%;
+    background: #ffbe33;
+    margin-right: 10%;
+    margin-top: -5%;
+}
+.card-title{
+    margin-top: 3%;
+    color: #ac2e31;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10%;
+    /* text-align: center; */
+}
+.card-subtitle{
+    color: gray;
+    font-size: 15px;
+    margin-left: 10%;
+    /* text-align: center; */
+}
+ /*quick Search start*/
+ #footer{
+    height:50px;
+    margin-top:3%; 
+    background-color:#000;
+ }
+.footerTitle > h4{
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+    padding-top:5px;
+}
+ /*quick Search end*/
+/* @media screen and (max-width:1175px) {
+    #heading {
+        margin-top:15%;
+    }
+    .dropdown{
+        margin-top:23%;
+    }
+   
+}
+@media screen and (max-width:1200px){
+    #heading {
+        margin-top:15%;
+    }
+    .dropdown{
+        margin-top:23%;
+    }
+}
+@media screen and (max-width:900px){
+    #heading {
+        margin-top:18%;
+        font-size: 35px;
+        margin-left: 25%;
+    }
+    .dropdown{
+        margin-top:26%;
+        margin-left:25%;
+    }
+    #logo > span{
+        margin-left:2%;
+    }
+    .btn-success{
+        margin-top:2%;
+    }
+}
+@media screen and (max-width:700px){
+    #heading {
+        margin-top: 21%;
+        font-size: 32px;
+        margin-left: 18%;
+    }
+    .dropdown{
+        margin-top:30%;
+        margin-left:18%;
+    }
+    #logo > span{
+        margin-left:-30%;
+    }
+    .btn-success{
+        margin-top:2%;
+    }
+
+}
+@media screen and (max-width: 500px){
+
+    .navbar-header > a.navbar-brand{
+        font-size: 25px;
+    }
+    #banner{
+        margin-top:-8%;
+    }
+    #logo {
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 60px;
+    }
+    .option>.icon{
+        margin-top:2%;
+    }
+    #logo > span {
+        margin-left: 30%;
+        margin-top:25%;
+    }
+    #heading {
+        margin-top: 28%;
+        font-size: 28px;
+        margin-left: 8%;
+        font-size: 27px;
+    }
+    .dropdown{
+        margin-top:35%;
+        margin-left:8%;
+        width: 80%;
+        margin-top:40%;
+    }
+    .restaurantSelect {
+        width: 63%;
+    }
+    #category{
+        margin-top:0px;
+    }
+   
+} */
